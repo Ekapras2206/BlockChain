@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blockchain Simulator - (CryptoCoin Template)</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/style-simulator.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="PENS.png" alt=""
+                    style="width: 45px;">Blockchain</h2>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-4 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about-simulator.html" class="nav-item nav-link">About Me</a>
+                <a href="hash.html" class="nav-item nav-link">Hash</a>
+                <a href="block.html" class="nav-item nav-link">Block</a>
+                <a href="chain.html" class="nav-item nav-link">Block Chain</a>
+                <a href="ecc.html" class="nav-item nav-link">ECC Signature</a>
+                <a href="konsensus.html" class="nav-item nav-link">Konsensus</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid hero-header bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">Blockchain Simulator</h1>
+                    <p class="animated slideInDown">Sebuah simulator interaktif untuk mempelajari konsep inti dari
+                        teknologi blockchain. Pilih salah satu menu simulasi di navbar atas untuk memulai.</p>
+                    <a href="about-simulator.html" class="btn btn-primary py-3 px-4 animated slideInDown">Tentang
+                        Saya</a>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="img/hero-1.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5" id="simulator-content">
+        <div class="container">
+
+            <div id="page-home" class="card shadow-sm border-0 mt-3 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card-body p-4">
+                    <h2 class="card-title">Selamat datang di Website Belajar Blockchain</h2>
+                    <p class="lead text-muted" id="datetime">Memuat waktu...</p>
+
+                    <h3 class="mt-4">Dasar Teori Singkat</h3>
+                    <p>Teknologi blockchain adalah sistem buku besar terdistribusi (Distributed Ledger Technology - DLT)
+                        yang aman secara kriptografis dan tidak dapat diubah (immutable). Setiap "blok" berisi
+                        sekumpulan transaksi, dan setiap blok terhubung secara kriptografis ke blok sebelumnya
+                        menggunakan hash, membentuk sebuah "rantai". Keamanan ini diperkuat oleh mekanisme konsensus
+                        (seperti Proof-of-Work) dan tanda tangan digital (ECC) untuk memvalidasi transaksi.</p>
+
+                    <h3 class="mt-4">Petunjuk Penggunaan</h3>
+                    <p>Website ini dirancang untuk membantu memahami konsep dan simulasi berbagai teknik dalam
+                        Blockchain Technology. Klik pada bagian Menu Bar di bagian atas untuk memilih simulasi atau
+                        fitur yang ingin dipelajari.</p>
+
+                    <p class="fw-bold mt-3">Menu Bar yang tersedia:</p>
+                    <ol>
+                        <li><strong>Home:</strong> Tampilan awal Website.</li>
+                        <li><strong>About Me:</strong> Profil pembuat Website.</li>
+                        <li><strong>Hash:</strong> Masukkan input teks pada area Text Input, lalu hasil SHA-256 Hash
+                            akan muncul otomatis setiap kali teks diubah.</li>
+                        <li><strong>Block:</strong> Anda dapat mengganti nomor blok, memberi input data, serta mengatur
+                            kecepatan mining. Tekan tombol Mine untuk memulai proses "Proof-of-Work".</li>
+                        <li><strong>Block Chain:</strong> Masukkan data, tekan "Mine", lalu "Add Block" untuk menambah
+                            blok baru.</li>
+                        <li><strong>ECC Signature:</strong> Klik "Generate Key Pair", tulis pesan, tekan "Sign Message",
+                            lalu "Verify Signature".</li>
+                        <li><strong>Konsensus:</strong> Simulasi dengan 3 user. Buat transaksi, kirim, lalu tekan "Mine
+                            Semua Transaksi". Coba ubah data dan tekan "Verify".</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <script src="js/app-simulator.js"></script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
